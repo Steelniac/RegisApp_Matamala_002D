@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="DispMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="warning"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    Acerca 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Acerca de </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+ 
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Acerca de la Aplicacion</ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="text-align: center;">
+            <!-- Centra la imagen horizontalmente y ajusta su tamaño -->
+            <img src="assets/img/appmovil.png" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+            <p>Es una solución a los desafíos de la asistencia educativa en tiempos de pandemia. 
+              Nuestra aplicación móvil simplificará el proceso de registro de asistencia para docentes y alumnos. 
+              Los docentes generan códigos QR, los alumnos los escanean y la asistencia se registra de manera precisa y eficiente.</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+   
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Video Tutorial</ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="text-align: center;">
+            <!-- Centra el video horizontalmente -->
+            <video width="320" height="240" controls style="margin: 0 auto;">
+              <source src="assets/videos/RegistrAPP.mp4" type="video/mp4">
+              Tu navegador no admite el elemento de video.
+            </video>
+            <p>Es una solución a los desafíos de la asistencia educativa en tiempos de pandemia. 
+              Nuestra aplicación móvil simplificará el proceso de registro de asistencia para docentes y alumnos. 
+              Los docentes generan códigos QR, los alumnos los escanean y la asistencia se registra de manera precisa y eficiente.</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

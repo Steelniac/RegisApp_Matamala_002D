@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button mode="ios" color="warning" text="Cancelar">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Ingrese sus datos</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+
+    <form [formGroup]="regForm" (ngSubmit)="crearUsuario()">
+      <ion-list>
+
+        <div *ngIf="regForm.get('nombre')?.invalid && (regForm.get('nombre')?.dirty || regForm.get('nombre')?.touched)">
+          <div style="color: red;" *ngIf="regForm.get('nombre')?.hasError('required')">
+            <br>
+            *El nombre es obligatorio
+          </div>
+        </div>
+
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input type="text" placeholder="John Doe" formControlName="nombre"></ion-input>
+        </ion-item>
+
+        <div *ngIf="regForm.get('n_usuario')?.invalid && (regForm.get('n_usuario')?.dirty || regForm.get('n_usuario')?.touched)">
+          <div style="color: red;" *ngIf="regForm.get('n_usuario')?.hasError('required')">
+            <br>
+            *El usuario es obligatorio
+          </div>
+        </div>
+        
+
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" placeholder="john.doe" formControlName="n_usuario"></ion-input>
+        </ion-item>
+
+        <div *ngIf="regForm.get('password')?.invalid && (regForm.get('password')?.dirty || regForm.get('password')?.touched)">
+          <div style="color: red;" *ngIf="regForm.get('password')?.hasError('required')">
+            <br>
+            *La constraseña es obligatoria
+          </div>
+        </div>
+        <div style="color:red;" *ngIf="regForm.get('password')?.hasError('minlength')">
+          *La contraseña debe tener 8 caracteres mínimo 
+       </div>
+      
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" placeholder="Nutella7321" formControlName="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input type="email" placeholder="corre@duocuc.cl" formControlName="email"></ion-input>
+        </ion-item>
+
+      </ion-list>
+      <br>
+      <ion-button (click)="crearUsuario()" [disabled]="!regForm.valid" expand="block" fill="solid" shape="round" color="primary">
+        Enviar
+      </ion-button>
+      
+    </form>
+  </ion-card-content>
+</ion-card>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <img class="logoDC" src="assets/img/duocuc.png" alt="DUOC UC">
+
+  <ion-label class="txtCent">Bienvenidos a RegisApp</ion-label>
+
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+    <ion-list>
+
+      <div *ngIf="loginForm.get('n_usuario')?.invalid && (loginForm.get('n_usuario')?.dirty || loginForm.get('n_usuario')?.touched)">
+        <div style="color: red;" *ngIf="loginForm.get('n_usuario')?.hasError('required')">
+          <br>
+          *El usuario es obligatorio
+        </div>
+      </div>
+
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" placeholder="john.doe" formControlName="n_usuario"></ion-input>
+      </ion-item>
+      
+      <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+        <div style="color: red;" *ngIf="loginForm.get('password')?.hasError('required')">
+          <br>
+          *La contraseña es obligatoria
+        </div>
+      </div>
+      
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" placeholder="Nutella7321" formControlName="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+  </form>
+
+  <div class="ion-text-center">
+    <ion-button (click)="login()" [disabled]="!loginForm.valid" expand="default" fill="solid" color="warning">
+      Iniciar Sesión
+    </ion-button>
+  </div>
+
+<ion-button style="padding-top: 10%;" routerLink="/formulario" expand="block" fill="clear" shape="round">
+  ¿Aún no tienes cuenta? <br>
+  ¡Resgistrate aquí!
+</ion-button>
+
+</ion-content>

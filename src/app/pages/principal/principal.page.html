@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="DispMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="warning"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Inicio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <img style="padding-top: 20%; padding-bottom: 5%; padding-left: 30%; padding-right: 30%;;" src="assets/img/pfp.png" alt="Foto de Perfil">
+
+  <p class="txtCent">Bienvenido, {{usuario.nombre | uppercase}}</p>
+
+  <div class="ion-text-center">
+    <ion-button routerLink="/camara" expand="default" fill="solid" color="warning">
+      Escanear QR
+    </ion-button>
+  </div>
+
+<h1 class="txtCent">Lunes 20 de Noviembre </h1>
+    
+    <ion-card class="horarioCard" *ngFor="let a of horarios; let i=index">
+      <ion-card-header>
+        <ion-card-title><p style="color: rgb(255, 255, 255);">{{ a['nombre']}}</p></ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p style="color: rgb(255, 255, 255);">Profesor/a: {{ a['prof']}}</p><br>
+      </ion-card-content>
+      <ion-card-content>
+        <p style="color: rgb(255, 255, 255);">Sala: {{ a['sala']}}</p><br>
+      </ion-card-content>
+      <ion-card-content>
+        <p style="color: rgb(255, 255, 255);">Horas: {{ a['hora']}}</p><br>
+      </ion-card-content>
+      
+      
+    </ion-card>
+
+</ion-content>

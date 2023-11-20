@@ -1,0 +1,128 @@
+{
+  "horarios": [
+    {
+      "id": 1,
+      "dia": "Lunes",
+      "nombre": "Programacion APP Moviles",
+      "prof": "Eduardo Baeza",
+      "hora": "10:00  -  11:20  Hrs",
+      "sala": "MP-LINF 210"
+    },
+    {
+      "id": 2,
+      "dia": "Lunes",
+      "nombre": "Calidad Software",
+      "prof": "Christian Horner",
+      "hora": "11:30  -  13:00 Hrs",
+      "sala": "MP-LINF 210"
+    },
+    {
+      "id": 3,
+      "dia": "Lunes",
+      "nombre": "Estadistica Descriptiva",
+      "prof": "Carca Farfan",
+      "hora": "13:40  -  15:00 Hrs",
+      "sala": "MP-LINF 208"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Nico",
+      "n_usuario": "nico.sol",
+      "password": "nicolo",
+      "rol": "alumno",
+      "isactive": true
+    },
+    {
+      "id": 2,
+      "nombre": "Cris",
+      "n_usuario": "cris.ben",
+      "password": "cris123",
+      "rol": "alumno",
+      "isactive": true
+    },
+    {
+      "id": 3,
+      "nombre": "Maria",
+      "n_usuario": "maria.gaj",
+      "password": "Maria1234",
+      "rol": "alumno",
+      "isactive": true
+    },
+    {
+      "id": 4,
+      "nombre": "Carlos Pina",
+      "n_usuario": "carlos.pina",
+      "password": "carlongo123",
+      "rol": "alumno",
+      "isactive": true
+    },
+    {
+      "id": 5,
+      "nombre": "claudio",
+      "n_usuario": "claudio.gallo",
+      "password": "claudiodos",
+      "rol": "alumno",
+      "isactive": true
+    },
+    {
+      "nombre": "Victor",
+      "n_usuario": "vitosos",
+      "password": "duoc2023",
+      "role": "usuario",
+      "isactive": false,
+      "id": 6
+    },
+    {
+      "nombre": "Michael",
+      "n_usuario": "schumacher7",
+      "password": "ferrari",
+      "role": "usuario",
+      "isactive": false,
+      "id": 7
+    },
+    {
+      "nombre": "matias",
+      "n_usuario": "atma.cl",
+      "password": "atmacl123",
+      "role": "usuario",
+      "isactive": false,
+      "id": 8
+    },
+    {
+      "nombre": "irravazabal",
+      "n_usuario": "irrar.rar",
+      "password": "rarararara",
+      "role": "usuario",
+      "isactive": false,
+      "id": 9
+    },
+    {
+      "nombre": "carlitos vera",
+      "n_usuario": "car.vera",
+      "password": "carlitosvera1",
+      "role": "usuario",
+      "isactive": false,
+      "id": 10
+    },
+    {
+      "nombre": "marcelo matamala",
+      "n_usuario": "mar.matamala",
+      "password": "126958064asd",
+      "email": "mar.matamala@duocuc.cl",
+      "role": "usuario",
+      "isactive": true,
+      "id": 11
+    },
+    {
+      "nombre": "andreo",
+      "n_usuario": "andre.caro",
+      "password": "126958064asd",
+      "email": "asasdsd@gmail.com",
+      "role": "usuario",
+      "isactive": true,
+      "id": 12
+    }
+  ]
+}

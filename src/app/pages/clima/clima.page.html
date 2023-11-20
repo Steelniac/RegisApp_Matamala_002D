@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="DispMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="warning"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    Clima
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card>
+    <ion-card-header>
+      <ion-card-title><h1 style="color: rgb(255, 255, 255);">Reporte del Clima </h1></ion-card-title>
+      <ion-card-subtitle><h3>{{ climanow.name }}</h3></ion-card-subtitle>
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-icon slot="start" name="thermometer-outline"></ion-icon>
+        <ion-label>Temperatura actual: {{ climanow.temp }}°C</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="accessibility-outline"></ion-icon>
+        <ion-label>Sensación Termica: {{ climanow.feels_like }}°C</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="snow-outline"></ion-icon>
+        <ion-label>Temperatura Minima: {{ climanow.temp_min }}°C</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="flame-outline"></ion-icon>
+        <ion-label>Temperatura Maxima: {{ climanow.temp_max }}°C</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="umbrella-outline"></ion-icon>
+        <ion-label>Humedad: {{ climanow.humidity }}%</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="speedometer-outline"></ion-icon>
+        <ion-label>Presión: {{ climanow.pressure }}hPa</ion-label>
+      </ion-item>
+    </ion-list>
+</ion-card> 
+</ion-content>
